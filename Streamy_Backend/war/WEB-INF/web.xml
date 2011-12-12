@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>AddRssFeedServlet</servlet-name>
+		<servlet-class>org.ariadne_eu.hcifetcher.servlet.AddRssFeedServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddTweetServlet</servlet-name>
+		<servlet-class>org.ariadne_eu.hcifetcher.servlet.AddTweetServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddFileServlet</servlet-name>
+		<servlet-class>org.ariadne_eu.hcifetcher.servlet.AddFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddScheduleServlet</servlet-name>
+		<servlet-class>org.ariadne_eu.hcifetcher.servlet.AddScheduleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Jersey</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddRssFeedServlet</servlet-name>
+		<url-pattern>/cron/addrss</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddFileServlet</servlet-name>
+		<url-pattern>/addfiles</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddScheduleServlet</servlet-name>
+		<url-pattern>/addschedules</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddTweetServlet</servlet-name>
+		<url-pattern>/cron/addtweet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Jersey</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+    	<web-resource-collection>
+ 			<web-resource-name>Crons</web-resource-name>
+            <url-pattern>/cron/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+ 	<security-constraint>
+    	<web-resource-collection>
+ 			<web-resource-name>Admin pages</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>

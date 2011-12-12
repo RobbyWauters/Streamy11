@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+	<cron>
+		<url>/cron/addtweet</url>
+		<description>Tweet Fetcher</description>
+		<schedule>every 15 minutes</schedule>
+	</cron>
+	<cron>
+		<url>/cron/addrss</url>
+		<description>RssFeed Fetcher</description>
+		<schedule>every 15 minutes</schedule>
+	</cron>
+</cronentries>
