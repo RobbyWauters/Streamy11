@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:background="@drawable/background">
+   
+   <!-- header -->
+    <RelativeLayout 
+    	android:id="@+id/header"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:layout_alignParentTop="true" 
+    	android:orientation="horizontal">
+    	
+    	<ImageView xmlns:android="http://schemas.android.com/apk/res/android" 
+		    android:id="@+id/imageTop"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/header_list_a" 
+		/>
+    </RelativeLayout>
+        
+   	<!-- bottom menu -->
+	<RelativeLayout 
+		android:id="@+id/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        >
+        <LinearLayout
+        	android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+        	android:orientation="horizontal"
+       		>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/twitterButton"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/menu_item_01" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/filesButton"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/menu_item_02" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/calendarButton"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/menu_item_03" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/commentsButton"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/menu_item_04" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/rssButton"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/menu_item_05" 
+			/>
+		</LinearLayout>
+	</RelativeLayout>
+        
+	<!-- actual stream -->
+	<ListView
+	    android:id="@+id/android:list"
+	    android:layout_width="fill_parent"
+	    android:fadingEdge="none"
+	    android:layout_height="wrap_content" 
+		android:layout_above="@id/menu" 
+		android:layout_below="@id/header" 
+	    />
+	
+	<!-- alternative text -->
+	<TextView
+	    android:id="@+id/android:empty"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:layout_marginTop="20px"
+	    android:text="@string/main_no_items"
+	    android:layout_above="@id/menu" 
+		android:layout_below="@id/header" />
+		    
+    <!-- stretcher 
+	<FrameLayout
+            android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:layout_weight="1">
+    </FrameLayout>-->
+    
+</RelativeLayout>

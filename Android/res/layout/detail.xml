@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/background"
+  >
+  	<!-- colored stroke on top -->
+	<View
+		android:id="@+id/stroke"
+		android:background="#b64653"
+		android:layout_width="fill_parent"
+		android:layout_height="20px"
+		/>
+  	
+  	<!-- title -->
+  	 <TextView
+		android:id="@+id/title"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical|center_horizontal"
+		android:layout_marginTop="15px"
+		android:layout_marginBottom="10px"
+		android:layout_marginRight="5px"
+		android:layout_marginLeft="5px"
+		android:textColor="#363636"
+		android:textSize="28px"
+		android:shadowColor="#ffffff" 
+		android:shadowDx="0.5"
+		android:shadowDy="0.5"
+		android:shadowRadius="0.5"
+     	/>
+     	
+     	<!-- BODY linear layout -->
+     	<LinearLayout
+     		android:id="@+id/body"
+     		android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+			
+			<!-- container layout for breadcrumbs, content is generated via code in DetailView.java -->
+			<LinearLayout
+				android:id="@+id/breadcrumbcontainer"  
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="10px"
+				/>
+			
+			<ScrollView   
+	        android:id="@+id/detail_content_scroll"  
+			android:background="@drawable/detail_content"
+			android:layout_height="222px"
+			android:layout_marginTop="5px"
+			android:layout_marginBottom="10px"
+	      	android:layout_width="fill_parent">  
+		     	<TextView
+					android:id="@+id/detail_content"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:textColor="#464646"
+					android:textSize="18px"
+					android:paddingLeft="30px"
+		            android:paddingRight="30px"
+		            android:paddingTop="20px"
+		            android:paddingBottom="20px"
+		            />
+			</ScrollView>
+	     		
+     	</LinearLayout>
+		
+	<!-- comment stream -->
+	<ListView
+	    android:id="@+id/android:list"
+	    android:background="@drawable/comments_bg"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:fadingEdge="none"
+		android:layout_below="@id/body"></ListView>
+		
+	<!--EditText-->
+	<EditText
+	android:id="@+id/newcomment"
+		android:layout_width="fill_parent"
+		android:layout_marginTop="15px"
+		android:layout_marginBottom="10px"
+		android:layout_marginRight="5px"
+		android:layout_marginLeft="5px"
+		android:textColor="#363636"
+		android:textSize="28px"
+		android:shadowColor="#ffffff" 
+		android:shadowDx="0.5"
+		android:shadowDy="0.5"
+		android:shadowRadius="0.5"
+		android:gravity="bottom|center_horizontal"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/android:list"/>    
+	
+     	
+</LinearLayout>

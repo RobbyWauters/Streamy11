@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	android:orientation="vertical"
+	android:id="@+id/LinearLayout01"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@drawable/background">
+	
+    <LinearLayout 
+    	android:orientation="horizontal"
+    	android:layout_height="wrap_content" 
+    	android:background="@drawable/header_a" 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/header"
+    	>
+    	
+    </LinearLayout>
+	
+	<LinearLayout 
+	    	android:orientation="horizontal"
+	    	android:layout_height="wrap_content" 
+	    	android:layout_width="wrap_content" 
+	    	>
+	    	<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_twitter"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_twitter"
+			    android:background="@drawable/dash_dummy" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_calendar"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_calendar"
+			    android:background="@drawable/dash_dummy" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_comments"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_comments"
+			    android:background="@drawable/dash_dummy" 
+			/>
+	    </LinearLayout>
+	
+	<LinearLayout 
+		android:id="@+id/dashboard"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+         <LinearLayout 
+	    	android:orientation="horizontal"
+	    	android:layout_height="wrap_content" 
+	    	android:layout_width="wrap_content" 
+	    	>
+	    	<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_files"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_files"
+			    android:background="@drawable/dash_dummy" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_all"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_all"
+			    android:background="@drawable/dash_dummy" 
+			/>
+			<ImageButton xmlns:android="http://schemas.android.com/apk/res/android" 
+			    android:id="@+id/dash_rss"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/dash_rss"
+			    android:background="@drawable/dash_dummy" 
+			/>
+	    </LinearLayout>
+	</LinearLayout>
+	
+	<!-- stretcher -->
+	<FrameLayout
+            android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:layout_weight="1">
+    </FrameLayout>
+    
+    <!-- content fixated to the bottom of the screen -->
+	<LinearLayout 
+		android:id="@+id/meter"
+		android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        >
+       
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    >
+		    
+			<be.kuleuven.MeterPanel 
+				android:id="@+id/dashboardmeter" 
+				android:layout_width="wrap_content"
+				android:layout_height="282px" 
+				/>
+		</LinearLayout>
+		  
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+		    android:id="@+id/footer"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/footer_home_a" >
+		    
+			<TextView
+				android:id="@+id/meter_info"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:gravity="center_vertical|center_horizontal"
+				
+				android:layout_marginRight="5px"
+				android:layout_marginLeft="5px"
+				android:textColor="#363636"
+				android:textStyle="bold"
+				android:textSize="22px"
+				android:shadowColor="#f2f2f2" 
+				android:shadowDx="0.5"
+				android:shadowDy="0.5"
+				android:shadowRadius="0.5"
+		     	/>
+		</LinearLayout>
+		
+		
+	</LinearLayout>
+</LinearLayout>
